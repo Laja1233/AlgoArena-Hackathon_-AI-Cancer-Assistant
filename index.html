@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Omic</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #1a1a1a;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: white;
+        }
+
+        .logo {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 40px;
+            border-radius: 8px;
+            background-color: #0077b5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .loading-container {
+            width: 300px;
+            text-align: center;
+        }
+
+        .loading-bar {
+            width: 100%;
+            height: 4px;
+            background-color: #333;
+            border-radius: 2px;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        .loading-progress {
+            height: 100%;
+            background-color: #0077b5;
+            width: 0%;
+            border-radius: 2px;
+            animation: loadProgress 2.5s ease-in-out forwards;
+        }
+
+        .loading-text {
+            color: #888;
+            font-size: 14px;
+        }
+
+        @keyframes loadProgress {
+            0% { width: 0%; }
+            50% { width: 70%; }
+            100% { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+   
+        <img src="images/logo.png" width="100px" alt="Logo" style=" object-fit: contain;" onerror="this.style.display='none'; this.parentNode.innerHTML='L';">
+  
+    
+    <div class="loading-container">
+        <div class="loading-bar">
+            <div class="loading-progress"></div>
+        </div>
+        <div class="loading-text">Loading...</div>
+    </div>
+
+    <script>
+        setTimeout(function() {
+            window.location.href = 'home.html';
+        }, 3000);
+    </script>
+</body>
+</html>

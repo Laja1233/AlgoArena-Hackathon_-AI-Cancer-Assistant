@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How It Works - OMIC</title>
+    <link rel="shortcut icon" href="images/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/chat.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <img src="images/logo_resized.png" width="120px" alt="omic">
+            </a>
+            
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="feature.html" class="nav-link">Features</a></li>
+                <li><a href="chat.html" class="nav-cta">Try It</a></li>
+            </ul>
+            
+            <div class="mobile-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        
+        <div class="mobile-menu">
+            <div class="mobile-menu-items">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="feature.html" class="nav-link">Features</a>
+                <a href="chat.html" class="nav-cta">Try It</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Page Header -->
+        <div class="page-header">
+            <h1 class="page-title">How OMIC Works</h1>
+            <p class="page-subtitle">Understanding Our AI-Powered Clinical Decision Support System</p>
+            
+        </div>
+
+
+        <!-- Chatbot Section -->
+        <section class="chatbot-section">
+            <div class="chatbot-header">
+                <h2>💬 OMIC Chat Interface</h2>
+                <p>Paste the copied prompt above to activate OMIC mode, then ask your clinical questions</p>
+            </div>
+
+            <div class="chatbot-container">
+                <div class="chat-messages" id="chatMessages">
+                    <!-- Messages will be dynamically added here -->
+                </div>
+                
+                <div class="loading-indicator" id="loadingIndicator">
+                    <span class="loading-dots">Thinking</span><span class="loading-dots">...</span>
+                </div>
+                
+                <div class="chat-input-container">
+                    <input 
+                        type="text" 
+                        class="chat-input" 
+                        id="chatInput"
+                        placeholder="Type your message here..."
+                        onkeypress="handleKeyPress(event)"
+                    >
+                    <button class="send-button" id="sendButton" onclick="sendMessage()">
+                        Send
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/chat.js"></script>
+</body>
+</html>
