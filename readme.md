@@ -1,5 +1,5 @@
 ![OMIC Main Interface](images/screenshots1.png)
-(images/screenshots2.png)
+
 # 🧬 OMIC - Oncology & Medical Innovation Collaborator
 
 **Advanced AI Clinical Decision Support System for Oncology Healthcare Professionals**
